@@ -14,6 +14,12 @@ namespace EPiCenterBaseProject.Models.Pages
         GroupName = Global.GroupNames.Specialized)]
     public class StartPage : BasePage
     {
-       
+        [CultureSpecific]
+        [Display(
+            Name = "Content Area",
+            Description = "",
+            GroupName = SystemTabNames.Content,
+            Order = 2)]
+        public virtual ContentArea BannerContentArea { get; set; }
     }
 }

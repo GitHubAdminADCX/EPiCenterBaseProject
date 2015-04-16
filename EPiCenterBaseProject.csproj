@@ -109,26 +109,29 @@
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
+    <Compile Include="Business\AppStart\StructureMapConfiguration.cs" />
+    <Compile Include="Business\AppStart\StructureMapDependencyResolver.cs" />
+    <Compile Include="Business\BundleConfig.cs" />
+    <Compile Include="Controllers\BannerBlockController.cs" />
     <Compile Include="Controllers\BasePageController.cs" />
     <Compile Include="Controllers\StartPageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Blocks\BannerBlock.cs" />
     <Compile Include="Models\Media\GenericMedia.cs" />
     <Compile Include="Models\Media\ImageFile.cs" />
     <Compile Include="Models\Media\VideoFile.cs" />
     <Compile Include="Models\Pages\BasePage.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
     <Compile Include="Models\Properties\PropertyStringList.cs" />
+    <Compile Include="Models\ViewModels\BannerBlockViewModel.cs" />
     <Compile Include="Models\ViewModels\BasePageViewModel.cs" />
     <Compile Include="Models\ViewModels\StartPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Business\" />
     <Folder Include="Helpers\" />
-    <Folder Include="Models\Blocks\" />
-    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ClientResources\Images\icons\layoutIcons24x24.png" />
@@ -235,6 +238,28 @@
     <Content Include="Static\lightbox\photos\thumb_image4.jpg" />
     <Content Include="Static\lightbox\photos\thumb_image5.jpg" />
     <Content Include="Global.asax" />
+    <Content Include="UI\css\framework.css" />
+    <Content Include="UI\css\ie.css" />
+    <Content Include="UI\css\images\dropdown_left.gif" />
+    <Content Include="UI\css\images\dropdown_right.gif" />
+    <Content Include="UI\css\images\dropdown_side.gif" />
+    <Content Include="UI\css\layout.css" />
+    <Content Include="UI\css\mediaqueries.css" />
+    <Content Include="UI\css\navi.css" />
+    <Content Include="UI\editUser.html" />
+    <Content Include="UI\form.html" />
+    <Content Include="UI\images\banner1.png" />
+    <Content Include="UI\images\icon-login.png" />
+    <Content Include="UI\images\logo.png" />
+    <Content Include="UI\index.html" />
+    <Content Include="UI\scripts\ie\css3-mediaqueries.min.js" />
+    <Content Include="UI\scripts\ie\html5shiv.min.js" />
+    <Content Include="UI\scripts\ie\ie9.js" />
+    <Content Include="UI\scripts\jquery-mobilemenu.min.js" />
+    <Content Include="UI\scripts\jquery.1.9.0.min.js" />
+    <Content Include="UI\Web_Guidelines.png" />
+    <Content Include="UI\_index.html" />
+    <Content Include="Views\_viewstart.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -249,6 +274,10 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\StartPage\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\BannerBlock\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -2,6 +2,8 @@
 using System.Web.Mvc;
 using EPiServer.ServiceLocation;
 using EPiServer.Web;
+using EPiCenterBaseProject.Business;
+using System.Web.Optimization;
 
 namespace EPiCenterBaseProject
 {
@@ -9,6 +11,7 @@ namespace EPiCenterBaseProject
     {
         protected void Application_Start()
         {
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
             // Register Display Options
             var options = ServiceLocator.Current.GetInstance<DisplayOptions>();
             options

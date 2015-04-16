@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>EPiCenter</title>
+<meta charset="iso-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/layout.css" type="text/css" >
+<link rel="stylesheet" href="css/mediaqueries.css" type="text/css" >
+<script src="scripts/jquery.1.9.0.min.js"></script>
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="css/ie.css" type="text/css" media="all">
+<script src="scripts/ie/css3-mediaqueries.min.js"></script>
+<script src="scripts/ie/ie9.js"></script>
+<script src="scripts/ie/html5shiv.min.js"></script>
+<![endif]-->
+
+<style type="text/css">
+
+</style>
+
+<!-- END DEMO STYLING -->
+</head>
+<body>
+<div class="wrapper head">
+  <header id="header" class="clear">
+    <div id="logo">
+		<a href="#"><img src="images/logo.png" alt="EPiCenter" /></a>
+	</div>
+    <div id="hgroup">
+      <form>
+		<div class="field siteSearchField"><input type="search" id="siteSearch" /></div>
+		<ul class="login">
+			<li><a href="">My Login</a></li>
+		</ul>	
+	  </form>
+    </div>
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<div class="wrapper topNav">
+  <nav id="topnav">
+    <ul class="clear">
+      <li class="first"><a href="index.html">Home</a></li>
+      <li><a href="Form.html">Form</a></li>
+      <li class="active"><a href="editUser.html">Edit User</a></li>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 1</a></li>
+      <li class="last-child"><a href="#">Link 1</a></li>
+    </ul>
+  </nav>
+</div>
+<!-- content -->
+<div class="wrapper mainBody">
+  <div id="container">
+
+    <!-- ################################################################################################ --> 
+	<div class="full_width clear">
+		<div class="block clear editUserBlock">
+			<h2>Edit User</h2>
+			<form action="editUser.html">
+				<div class="field">
+					<label>First Name</label>
+					<input type="text" name="" id="" />
+				</div>
+				<div class="field">
+					<label>Last Name</label>
+					<input type="text" name="" id="" />
+				</div>
+				<div class="field">
+					<label>Role</label>
+					<select>
+						<option>Super Admin</option>
+						<option>Admin</option>
+						<option>User</option>
+					</select>
+				</div>
+				
+				<div class="field">
+					<label>Gender</label>
+					<label><input type="radio" name="gender" id="" /><span>Male</span></label>
+					<label><input type="radio" name="gender" id="" /><span>Female</span></label>
+				</div>
+				<div class="field">
+					<label>Subscribe</label>
+					<label><input type="checkbox" name="" id="" /><span>Blog</span></label>
+					<label><input type="checkbox" name="" id="" /><span>Yammer</span></label>
+					<label><input type="checkbox" name="" id="" /><span>Newsletter</span></label>
+				</div>
+				<div class="field">
+					<label>Comments</label>
+					<textarea></textarea>
+				</div>
+				<div class="field buttonCont">
+					<input type="submit" name="" id="" value="Save" />
+					<input type="reset" name="" id="" value="Clear" />
+				</div>
+			</form>
+		</div>
+    </div>
+    
+  </div>
+</div>
+<!-- Footer -->
+<div class="wrapper footer">
+  <footer id="footer" class="clear">
+    <p class="fl_left">&copy; EPiCenter</p>
+    <p class="fl_right"></p>
+  </footer>
+</div>
+</body>
+</html>

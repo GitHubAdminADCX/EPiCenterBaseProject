@@ -11,7 +11,7 @@ namespace EPiCenterBaseProject.Controllers
         public ActionResult Index(StartPage currentPage)
         {
             var model = new StartPageViewModel();
-            model.Title  = currentPage.Title;
+            model.StartPage  = currentPage;
             return View(model);
         }
 
