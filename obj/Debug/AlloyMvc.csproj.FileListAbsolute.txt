@@ -1,0 +1,8 @@
+C:\EPiCenter\EPiCenterBaseProject\obj\Debug\AlloyMvc.csprojResolveAssemblyReference.cache
+C:\EPiCenter\EPiCenterBaseProject\bin\EPiServer.Templates.Alloy.Mvc.dll
+C:\EPiCenter\EPiCenterBaseProject\bin\EPiServer.Templates.Alloy.Mvc.pdb
+C:\EPiCenter\EPiCenterBaseProject\bin\Microsoft.Web.Infrastructure.dll
+C:\EPiCenter\EPiCenterBaseProject\bin\System.Web.Mvc.dll
+C:\EPiCenter\EPiCenterBaseProject\bin\Microsoft.Web.Infrastructure.xml
+C:\EPiCenter\EPiCenterBaseProject\obj\Debug\EPiServer.Templates.Alloy.Mvc.dll
+C:\EPiCenter\EPiCenterBaseProject\obj\Debug\EPiServer.Templates.Alloy.Mvc.pdb
