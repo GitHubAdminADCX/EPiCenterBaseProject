@@ -1,7 +1,52 @@
-﻿@model EPiCenterBaseProject.Models.ViewModels.StartPageViewModel
+﻿@using EPiServer.Shell.Web.Mvc.Html
+@using EPiServer.Web.Mvc.Html
+
+@model EPiCenterBaseProject.Models.ViewModels.StartPageViewModel
 
 @{
-    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.Title</h2>
+
+    <!-- #############################	BANNER	######################################## -->
+    <div class="full_width clear">
+      @Html.PropertyFor(p => p.StartPage.BannerContentArea)
+    </div>
+    <!-- ################################################################################################ --> 
+	<!-- ################################################################################################ -->
+    <div class="full_width clear">
+      <div class="two_third col first">
+		  <div class="block clear overviewBlock">
+			<h2>EPi Overview</h2>
+			<div class="cont">
+				<p>Få bättre koll, smartare elförbrukning och sänkta kostnader. Få bättre koll, smartare elförbrukning och sänkta kostnader. Få bättre koll, smartare elförbrukning och sänkta kostnader. Få bättre koll, smartare elförbrukning och sänkta kostnader. Få bättre koll, smartare elförbrukning och sänkta kostnader. Få bättre koll, smartare elförbrukning och sänkta kostnader. Få bättre koll, smartare elförbrukning och sänkta kostnader. Få bättre koll, smartare elförbrukning och sänkta kostnader. Få bättre koll, smartare elförbrukning och sänkta kostnader. </p>
+				<p>Få bättre koll, smartare elförbrukning och sänkta kostnader. Få bättre koll, smartare elförbrukning och sänkta kostnader. Få bättre koll, smartare elförbrukning och sänkta kostnader. Få bättre koll, smartare elförbrukning och sänkta kostnader. Få bättre koll, smartare elförbrukning och sänkta kostnader. </p>
+				<a href="" class="readMore">read more</a>
+			</div>
+		  </div>
+		  <div class="block clear newsBlock">
+			@Html.PropertyFor(p => p.StartPage.NewsListContentArea)
+		  </div>
+	  </div>
+	  
+      <div class="one_third col">
+		<div class="block clear yammerBlock">
+			<h2>One third</h2>
+			<ul class="yammerUpdate">
+				<li><a href="">Some yammer update...</a></li>
+				<li><a href="">Some yammer update...</a></li>
+				<li><a href="">Some yammer update...</a></li>
+				<li><a href="">Some yammer update...</a></li>
+			</ul>
+		</div>
+	  </div>
+	  
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="full_width clear">
+      <div class="one_third col first"><div class="block clear pollBlock"><h2>Poll/ Survey</h2></div></div>
+      <div class="one_third col"><div class="block clear calenderBlock"><h2>Calender</h2></div></div>
+      <div class="one_third col"><div class="block clear blogBlock"><h2>EPi Blog</h2></div></div>
+    </div>
+    

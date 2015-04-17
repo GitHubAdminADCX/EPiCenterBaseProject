@@ -1,0 +1,9 @@
+﻿@using EPiServer.Web.Routing
+@model EPiCenterBaseProject.Models.ViewModels.BannerBlockViewModel
+
+<ul id="banners">
+    <li>
+        <a href="@UrlResolver.Current.GetUrl(Model.BannerBlock.BannerLink)" class="hero-button-primary">
+          @Html.PropertyFor(p => p.BannerBlock.BannerImage)</a>
+    </li>
+</ul>
