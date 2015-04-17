@@ -11,8 +11,10 @@
         @foreach(var newsPage in Model.newsPages) 
         {
         <li>
+        @if(newsPage.NewsImage!=null)
+        {
             <div class="newsImg">
-                <img src="@Url.ContentUrl(newsPage.NewsImage)" alt="Banner 1" /></div>
+                <img src="@Url.ContentUrl(newsPage.NewsImage)" alt="Banner 1" /></div>}
             <div class="newsLinkCont">
                 <span class="date">@newsPage.StartPublish.ToShortDateStr()</span> <a href="@UrlResolver.Current.GetUrl(newsPage.ContentLink)">@newsPage.Title</a>
             </div>
