@@ -1,22 +1,26 @@
 ﻿@model EPiCenterBaseProject.Models.ViewModels.BasePageViewModel
-
 <div class="wrapper head">
-  <header id="header" class="clear">
+    <header id="header" class="clear">
     <div id="logo">
 		<a href="@Model.HeaderViewModel.StartPage.LinkURL"><img src="../../../UI/images/logo.png" alt="EPiCenter" /></a>
 	</div>
     <div id="hgroup">
-      <form>
 		<div class="field siteSearchField"><input type="search" id="siteSearch" /></div>
 		<ul class="login">
-			<li><a href="">My Login</a></li>
+        @if(@Model.HeaderViewModel.IsUserLoggedIn == true)
+        {
+         <li><a href="@Url.Action("SignOutUser")">Sign Out</a></li>
+        }
+        else
+        {
+        <li><a href="@Url.Action("SignInUser")">My Login</a></li>
+        }
 		</ul>	
-	  </form>
     </div>
   </header>
 </div>
 <div class="wrapper topNav">
-  <nav id="topnav">
+    <nav id="topnav">
     <ul class="clear">
       <li class="active first"><a href="index.html">Home</a></li>
       <li><a href="Form.html">Form</a></li>

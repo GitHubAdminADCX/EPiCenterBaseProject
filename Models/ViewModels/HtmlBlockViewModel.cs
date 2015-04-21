@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using EPiServer.Core;
+using EPiCenterBaseProject.Models.Blocks;
 
 namespace EPiCenterBaseProject.Models.ViewModels
 {
-    public class HeaderViewModel
+    public class HtmlBlockViewModel
     {
-        public PageData StartPage { get; set; }
-        public bool IsUserLoggedIn { get; set; }
+        public HtmlBlock HtmlBlock { get; set; }
     }
 }

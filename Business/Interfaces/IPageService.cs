@@ -11,5 +11,7 @@ namespace EPiCenterBaseProject.Business.Interfaces
         string GetFriendlyUrl(ContentReference reference, string language = null);
         PageReference GetNewsListPageRef();
         string GetFriendlyUrlByPageId(int pageId);
+        bool IsUserLoggedIn();
+        PageReference GetLoginPageRef();
     }
 }

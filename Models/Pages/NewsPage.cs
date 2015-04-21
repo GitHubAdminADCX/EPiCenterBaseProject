@@ -40,6 +40,8 @@ namespace EPiCenterBaseProject.Models.Pages
                     Order = 3)]
                 [UIHint(UIHint.Image)]
                 public virtual ContentReference NewsImage { get; set; }
+
+            
          
     }
 }

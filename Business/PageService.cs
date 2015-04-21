@@ -139,6 +139,21 @@ namespace EPiCenterBaseProject.Business
             return startPage.NewsListContainer;
         }
 
+        public PageReference GetLoginPageRef()
+        {
+            var startPage = GetStartPage();
+            if (ContentReference.IsNullOrEmpty(startPage.LoginPageReference))
+            {
+                Log.Error("LoginPageReference has no value");
+            }
+            return startPage.LoginPageReference;
+        }
+
+        public bool IsUserLoggedIn()
+        {
+            bool IsUserValid = (System.Web.HttpContext.Current.User != null) && System.Web.HttpContext.Current.User.Identity.IsAuthenticated;
+            return IsUserValid;
+        }
    
     }
 }

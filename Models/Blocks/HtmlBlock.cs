@@ -6,10 +6,9 @@ using EPiServer.DataAnnotations;
 
 namespace EPiCenterBaseProject.Models.Blocks
 {
-    [ContentType(DisplayName = "NewsListBlock", GUID = "64b46a4b-8758-4564-ae82-ffd562412805", Description = "")]
-    public class NewsListBlock : BlockData
+    [ContentType(DisplayName = "HtmlBlock", GUID = "f6411178-759a-4e63-9807-2f55a18b770d", Description = "")]
+    public class HtmlBlock : BlockData
     {
-
         [CultureSpecific]
         [Editable(true)]
         [Display(
@@ -19,14 +18,22 @@ namespace EPiCenterBaseProject.Models.Blocks
             Order = 2)]
         public virtual String Title { get; set; }
 
+        [CultureSpecific]
+        [Editable(true)]
+        [Display(
+            Name = "Body",
+            Description = "Body",
+            GroupName = SystemTabNames.Content,
+            Order = 3)]
+        public virtual XhtmlString Body { get; set; }
 
         [CultureSpecific]
         [Editable(true)]
         [Display(
-            Name = "No of News",
-            Description = "No of News",
+            Name = "Link",
+            Description = "Link",
             GroupName = SystemTabNames.Content,
             Order = 5)]
-        public virtual Int32 NoOfNews { get; set; }
+        public virtual PageReference Link { get; set; }
     }
 }

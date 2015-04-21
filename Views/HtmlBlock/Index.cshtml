@@ -1,0 +1,7 @@
+﻿@using EPiServer.Web.Routing @model EPiCenterBaseProject.Models.ViewModels.HtmlBlockViewModel
+<h2>
+    @Html.PropertyFor(p => p.HtmlBlock.Title) </h2>
+<div class="cont">
+    @Html.PropertyFor(p => p.HtmlBlock.Body) <a href="@UrlResolver.Current.GetUrl(Model.HtmlBlock.Link)"
+        class="readMore">read more</a>
+</div>

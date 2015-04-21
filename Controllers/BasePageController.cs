@@ -8,12 +8,15 @@ using EPiCenterBaseProject.Models.Pages;
 using EPiCenterBaseProject.Models.ViewModels;
 using EPiCenterBaseProject.Business.Interfaces;
 using EPiServer.ServiceLocation;
+using System.Web.Security;
+using EPiServer;
 
 namespace EPiCenterBaseProject.Controllers
 {
     public class BasePageController<T> : PageController<T> where T : BasePage
     {
          private readonly IPageService _pageService = ServiceLocator.Current.GetInstance<IPageService>();
+         private readonly IContentRepository _contentRepository = ServiceLocator.Current.GetInstance<IContentRepository>();
 
         public T CurrentPage
         {
@@ -56,9 +59,22 @@ namespace EPiCenterBaseProject.Controllers
         {
             var model = new HeaderViewModel()
             {
-                StartPage = _pageService.GetStartPage()
+                StartPage = _pageService.GetStartPage(),
+                IsUserLoggedIn = _pageService.IsUserLoggedIn()
             };
             return model;
+        }
+
+        public ActionResult SignOutUser()
+        {
+            FormsAuthentication.SignOut();
+            return Redirect(_pageService.GetStartPage().LinkURL);
+        }
+
+        public ActionResult SignInUser()
+        {
+            var loginPage = _contentRepository.Get<LoginPage>(_pageService.GetLoginPageRef());
+            return Redirect(loginPage.LinkURL);
         }
 
     }

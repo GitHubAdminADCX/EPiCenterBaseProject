@@ -109,6 +109,7 @@
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
+    <Compile Include="Business\AppStart\RouteConfig.cs" />
     <Compile Include="Business\AppStart\StructureMapConfiguration.cs" />
     <Compile Include="Business\AppStart\StructureMapDependencyResolver.cs" />
     <Compile Include="Business\BundleConfig.cs" />
@@ -118,8 +119,11 @@
     <Compile Include="Business\PageService.cs" />
     <Compile Include="Controllers\BannerBlockController.cs" />
     <Compile Include="Controllers\BasePageController.cs" />
+    <Compile Include="Controllers\HtmlBlockController.cs" />
+    <Compile Include="Controllers\LoginPageController.cs" />
     <Compile Include="Controllers\NewsListBlockController.cs" />
     <Compile Include="Controllers\NewsPageController.cs" />
+    <Compile Include="Controllers\StandardPageController.cs" />
     <Compile Include="Controllers\StartPageController.cs" />
     <Compile Include="Extensions\DateExtensions.cs" />
     <Compile Include="Extensions\UrlExtensions.cs" />
@@ -127,20 +131,26 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Blocks\BannerBlock.cs" />
+    <Compile Include="Models\Blocks\HtmlBlock.cs" />
     <Compile Include="Models\Blocks\NewsListBlock.cs" />
     <Compile Include="Models\Media\GenericMedia.cs" />
     <Compile Include="Models\Media\ImageFile.cs" />
     <Compile Include="Models\Media\VideoFile.cs" />
     <Compile Include="Models\Pages\BasePage.cs" />
     <Compile Include="Models\Pages\Container.cs" />
+    <Compile Include="Models\Pages\LoginPage.cs" />
     <Compile Include="Models\Pages\NewsPage.cs" />
+    <Compile Include="Models\Pages\StandardPage.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
     <Compile Include="Models\Properties\PropertyStringList.cs" />
     <Compile Include="Models\ViewModels\BannerBlockViewModel.cs" />
     <Compile Include="Models\ViewModels\BasePageViewModel.cs" />
     <Compile Include="Models\ViewModels\HeaderViewModel.cs" />
+    <Compile Include="Models\ViewModels\HtmlBlockViewModel.cs" />
+    <Compile Include="Models\ViewModels\LoginPageViewModel.cs" />
     <Compile Include="Models\ViewModels\NewsListBlockViewModel.cs" />
     <Compile Include="Models\ViewModels\NewsPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\StandardPageViewModel.cs" />
     <Compile Include="Models\ViewModels\StartPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -294,6 +304,9 @@
     <Content Include="Views\BannerBlock\Index.cshtml" />
     <Content Include="Views\NewsPage\Index.cshtml" />
     <Content Include="Views\NewsListBlock\Index.cshtml" />
+    <Content Include="Views\StandardPage\Index.cshtml" />
+    <Content Include="Views\HtmlBlock\Index.cshtml" />
+    <Content Include="Views\LoginPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
