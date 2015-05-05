@@ -1,4 +1,5 @@
 
+
 /* #################################################################################################### */
 /* ############### PLEASE READ THE FOLLOWING TO UNDERSTAND THIS DOCUMENT ############################## */
 /* ###############  FEEL FREE TO DELETE THE INSTRUCTIONS IF NOT NEEDED   ############################## */
@@ -166,13 +167,3 @@ If you add all of the above sizes together you get => 100%
 .three_sixth{width:48.4375%;} /* Same as two_quarter */
 .four_sixth{width:65.625%;} /* Same as two_third */
 .five_sixth{width:82.8125%;}
-
-/*----------------------------------------------full width wrapper-------------------------------------*/
-div.full_width{margin-top:20px;}
-div.full_width:first-child{margin-top:0;}
-div.full_width .block {
-	color: #616263;
-	background-color: #fff;
-	border: 1px solid #dadada;
-	padding:15px;
-}

@@ -10,12 +10,17 @@ using EPiCenterBaseProject.Business.Interfaces;
 using EPiServer.ServiceLocation;
 using System.Web.Security;
 using EPiServer;
+using EPiServer.Core;
+using EPiCenterBaseProject.Models.Media;
+using EPiServer.Web.Routing;
 
 namespace EPiCenterBaseProject.Controllers
 {
     public class BasePageController<T> : PageController<T> where T : BasePage
     {
          private readonly IPageService _pageService = ServiceLocator.Current.GetInstance<IPageService>();
+         private readonly INewsService _newsService = ServiceLocator.Current.GetInstance<INewsService>();
+         private readonly IMenuLinkService _menuLinkService = ServiceLocator.Current.GetInstance<IMenuLinkService>();
          private readonly IContentRepository _contentRepository = ServiceLocator.Current.GetInstance<IContentRepository>();
 
         public T CurrentPage
@@ -50,6 +55,7 @@ namespace EPiCenterBaseProject.Controllers
                 }
             }
             model.HeaderViewModel = CreateHeaderModel();
+            model.AnnouncementsViewModel = CreateAnnouncementModel();
 
            
             return model;
@@ -60,7 +66,18 @@ namespace EPiCenterBaseProject.Controllers
             var model = new HeaderViewModel()
             {
                 StartPage = _pageService.GetStartPage(),
-                IsUserLoggedIn = _pageService.IsUserLoggedIn()
+                IsUserLoggedIn = _pageService.IsUserLoggedIn(),
+                MenuLinks = _menuLinkService.GetMainMenuLinks()
+            };
+            return model;
+        }
+
+        private AnnouncementsViewModel CreateAnnouncementModel()
+        {
+            var model = new AnnouncementsViewModel()
+            {
+                ShowHide = _pageService.GetStartPage().Announcements,
+                AnnouncementItems = _newsService.GetAnnouncementList()
             };
             return model;
         }
@@ -76,6 +93,8 @@ namespace EPiCenterBaseProject.Controllers
             var loginPage = _contentRepository.Get<LoginPage>(_pageService.GetLoginPageRef());
             return Redirect(loginPage.LinkURL);
         }
+
+       
 
     }
 }

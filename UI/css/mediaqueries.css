@@ -10,17 +10,14 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 
 /* 240 + 320px */
 
+
 @media screen and (min-width:240px) and (max-width:360px) {
+
+	
 	#header, #topnav, #container, #footer{max-width:95%; margin:0 auto;}
 	
 	#topnav ul{display:none;}
-	
-	.one_half, 
-	.one_third, .two_third, 
-	.one_quarter, .two_quarter, .three_quarter, 
-	.one_fifth, .two_fifth, .three_fifth, .four_fifth, 
-	.one_sixth, .two_sixth, .three_sixth, .four_sixth, .five_sixth{display:block; float:none; width:auto; margin:0 0 2% 0; padding:0;}
-	
+
 	#header #hgroup{display:block; width:100%; float:none; margin:0 0 15px 0; padding:0;}
 	
 	#header, #footer{text-align:center;}
@@ -31,28 +28,44 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 /* 480px */
 
 @media screen and (min-width:361px) and (max-width:600px) {
-	#header, #topnav, #container, #footer{max-width:95%; margin:0 auto;}
-	
-	#topnav ul{display:none;}
-	
-	#footer p{float:none;}
-	#footer p:first-child{margin-bottom:8px;}
+
+	#header, body {background:blue;}
 }
 
 /* 768px */
 
 @media screen and (min-width:601px) and (max-width:800px) {
+
+
+	.col3 .one_third {}
 	#header, #topnav, #container, #footer{max-width:95%; margin:0 auto;}
+	#header, body {background:green;}
+	.profileBlock .title span{ display: inline-block; width: 75%;}
 }
 
 /* 960px */
 
-@media screen and (min-width:960px) {
-	#header, #topnav, #container, #footer{max-width:960px; margin:0 auto;}
+@media screen and (min-width:1920px) {
+		#header, #topnav, #container, #footer{max-width:960px; margin:0 auto;}
+	.profileBlock .title span{ display: inline-block; width: 80%;}
+
+	#topnav form{display:none;}
 }
 
+
+@media screen and (max-width:768px) {
+	.one_half, 
+	.one_third, .two_third, 
+	.one_quarter, .two_quarter, .three_quarter, 
+	.one_fifth, .two_fifth, .three_fifth, .four_fifth, 
+	.one_sixth, .two_sixth, .three_sixth, .four_sixth, .five_sixth{display:block; float:none; width:auto; margin:0 0 2% 0; padding:0;}
+	#header, #topnav, #container, #footer{max-width:95%; margin:0 auto;}
+	.profileBlock .title span{ display: inline-block; width: 75%;}
+	#header, body {background:purple;}
+}
 /* Hide The Jquery Generated Navigation Form from 601px upwards */
 
 @media screen and (min-width:601px) and (max-width:1920px) {
-	#topnav form{display:none;}
+
+	
 }

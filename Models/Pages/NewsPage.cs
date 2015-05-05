@@ -11,7 +11,7 @@ namespace EPiCenterBaseProject.Models.Pages
     [ContentType(DisplayName = "NewsPage", GUID = "700ce388-a93b-4622-b324-9dd2f8a4c755", Description = "")]
     public class NewsPage : BasePage
     {
-        
+                [Required]
                 [CultureSpecific]
                 [Editable(true)]
                 [Display(
@@ -40,6 +40,15 @@ namespace EPiCenterBaseProject.Models.Pages
                     Order = 3)]
                 [UIHint(UIHint.Image)]
                 public virtual ContentReference NewsImage { get; set; }
+
+                [CultureSpecific]
+                [Editable(true)]
+                [Display(
+                    Name = "Show As Announcement",
+                    Description = "Show As Announcement",
+                    GroupName = SystemTabNames.Content,
+                    Order = 6)]
+                public virtual bool ShowAsAnnouncement { get; set; }
 
             
          

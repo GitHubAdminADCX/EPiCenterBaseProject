@@ -5,3 +5,4 @@ C:\EPiCenter\EPiCenterBaseProject\bin\System.Web.Mvc.dll
 C:\EPiCenter\EPiCenterBaseProject\bin\Microsoft.Web.Infrastructure.xml
 C:\EPiCenter\EPiCenterBaseProject\obj\Debug\EPiCenterBaseProject.Mvc.dll
 C:\EPiCenter\EPiCenterBaseProject\obj\Debug\EPiCenterBaseProject.Mvc.pdb
+C:\EPiCenter\EPiCenterBaseProject\obj\Debug\EPiCenterBaseProject.csprojResolveAssemblyReference.cache

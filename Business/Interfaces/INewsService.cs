@@ -9,5 +9,6 @@ namespace EPiCenterBaseProject.Business.Interfaces
     public interface INewsService
     {
         IEnumerable<NewsPage> GetNewsList();
+        IEnumerable<NewsPage> GetAnnouncementList();
     }
 }

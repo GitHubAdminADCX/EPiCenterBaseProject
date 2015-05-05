@@ -23,17 +23,16 @@ namespace EPiCenterBaseProject.Models.Blocks
         [CultureSpecific]
         [Editable(true)]
         [Display(
-            Name = "Banner Info",
+            Name = "Banner Info 1",
             Description = "Banner Info",
             GroupName = SystemTabNames.Content,
             Order = 2)]
-        [UIHint(UIHint.Textarea)]
         public virtual String BannerInfo { get; set; }
 
         [CultureSpecific]
         [Editable(true)]
         [Display(
-            Name = "Banner Image",
+            Name = "Banner Image 1",
             Description = "Banner Image",
             GroupName = SystemTabNames.Content,
             Order = 3)]
@@ -45,11 +44,73 @@ namespace EPiCenterBaseProject.Models.Blocks
         [Required]
         [Editable(true)]
         [Display(
-            Name = "Banner Link",
+            Name = "Banner Link 1",
             Description = "BannerLink",
             GroupName = SystemTabNames.Content,
             Order = 4)]
         public virtual PageReference BannerLink { get; set; }
+
+
+        [CultureSpecific]
+        [Editable(true)]
+        [Display(
+            Name = "Banner Info 2",
+            Description = "Banner Info",
+            GroupName = SystemTabNames.Content,
+            Order = 5)]
+        public virtual String BannerInfo2 { get; set; }
+
+        [CultureSpecific]
+        [Editable(true)]
+        [Display(
+            Name = "Banner Image 2",
+            Description = "Banner Image",
+            GroupName = SystemTabNames.Content,
+            Order = 6)]
+        [UIHint(UIHint.Image)]
+        public virtual ContentReference BannerImage2 { get; set; }
+
+
+        [CultureSpecific]
+        [Required]
+        [Editable(true)]
+        [Display(
+            Name = "Banner Link 2",
+            Description = "BannerLink",
+            GroupName = SystemTabNames.Content,
+            Order = 7)]
+        public virtual PageReference BannerLink2 { get; set; }
+
+
+        [CultureSpecific]
+        [Editable(true)]
+        [Display(
+            Name = "Banner Info 3",
+            Description = "Banner Info",
+            GroupName = SystemTabNames.Content,
+            Order = 8)]
+        public virtual String BannerInfo3 { get; set; }
+
+        [CultureSpecific]
+        [Editable(true)]
+        [Display(
+            Name = "Banner Image 3",
+            Description = "Banner Image",
+            GroupName = SystemTabNames.Content,
+            Order = 9)]
+        [UIHint(UIHint.Image)]
+        public virtual ContentReference BannerImage3 { get; set; }
+
+
+        [CultureSpecific]
+        [Required]
+        [Editable(true)]
+        [Display(
+            Name = "Banner Link 3",
+            Description = "BannerLink",
+            GroupName = SystemTabNames.Content,
+            Order = 10)]
+        public virtual PageReference BannerLink3 { get; set; }
 
     }
 }

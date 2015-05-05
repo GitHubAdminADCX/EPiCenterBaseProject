@@ -21,6 +21,10 @@ namespace EPiCenterBaseProject.Business.AppStart
               {
                   component.For<INewsService>().Use<NewsService>();
                   component.For<IPageService>().Use<PageService>();
+                  component.For<IRSSService>().Use<RSSService>();
+                  component.For<IMenuLinkService>().Use<MenuLinkService>();
+                  component.For<IProfilePageService>().Use<ProfilePageService>();
+                  component.For<IBlogPageService>().Use<BlogPageService>();
               });
 
             DependencyResolver.SetResolver(new StructureMapDependencyResolver(context.Container));

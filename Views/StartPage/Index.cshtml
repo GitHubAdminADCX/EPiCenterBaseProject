@@ -23,25 +23,14 @@
 			@Html.PropertyFor(p => p.StartPage.NewsListContentArea)
 		  </div>
 	  </div>
-	  
       <div class="one_third col">
-		<div class="block clear yammerBlock">
-			<h2>One third</h2>
-			<ul class="yammerUpdate">
-				<li><a href="">Some yammer update...</a></li>
-				<li><a href="">Some yammer update...</a></li>
-				<li><a href="">Some yammer update...</a></li>
-				<li><a href="">Some yammer update...</a></li>
-			</ul>
-		</div>
+       @Html.PropertyFor(p => p.StartPage.YammerContentArea)
+        </div>
+      <div class="one_third col">
+	  @Html.PropertyFor(p => p.StartPage.RightColumnContentArea)
 	  </div>
-	  
     </div>
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
-    <div class="full_width clear">
-      <div class="one_third col first"><div class="block clear pollBlock"><h2>Poll/ Survey</h2></div></div>
-      <div class="one_third col"><div class="block clear calenderBlock"><h2>Calender</h2></div></div>
-      <div class="one_third col"><div class="block clear blogBlock"><h2>EPi Blog</h2></div></div>
-    </div>
+   
     

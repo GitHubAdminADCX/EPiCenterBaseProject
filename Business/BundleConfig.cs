@@ -22,11 +22,18 @@ namespace EPiCenterBaseProject.Business
             bundles.Add(new StyleBundle("~/bundles/css").Include(
                         "~/UI/css/layout.css",
                         "~/UI/css/mediaqueries.css"
+                        //"~/UI/css/framework.css",
+                        //"~/UI/css/navi.css"
                         ));
 
 
             bundles.Add(new ScriptBundle("~/bundles/netrscripts").Include(
-                        "~/UI/scripts/jquery.1.9.0.min.js"                        
+                        "~/UI/scripts/jquery.1.9.0.min.js",
+                         "~/UI/scripts/script.js",
+                         //"~/UI/scripts/libs/jquery-fullcalendar.min.js",
+                         "~/UI/scripts/libs/jquery.cycle.all.js"
+                         //"~/UI/scripts/libs/jquery.cycle.lite.js",
+                         //"~/UI/scripts/libs/jquery.cycle2.min.js"
                         )); 
 
 

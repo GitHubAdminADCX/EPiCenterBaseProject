@@ -5,6 +5,7 @@ html{overflow-y:scroll;}
 
 body{font-size:100%; font-family:"Century Gothic",Georgia, "Times New Roman", Times, serif; color:#919191;}
 
+hr {height:1px; background-color:#dadada; border: 1px solid #dadada;}
 p{margin-bottom:15px;}
 ul {list-style:none; margin:0; padding:0;}
 input[type="text"], input[type="search"] {padding:5px; border:1px solid #dadada;}
@@ -14,11 +15,12 @@ input[type="text"], input[type="search"] {padding:5px; border:1px solid #dadada;
 .right{text-align:right;}
 .nostart{margin:0; padding:0; list-style:none;}
 .hidden{display:none;}
-
+.left {float:left;}
+.right{float:right;}
 .clear{display:block; clear:both;}
 .clear:after{display:block; visibility:hidden; height:0; clear:both; font-size:0; content:"";}
 
-a{outline:none; text-decoration:none; color:#02438b;}
+a{outline:none; text-decoration:none; color:#02519E;}
 
 .fl_left{float:left;}
 .fl_right{float:right;}
@@ -27,6 +29,8 @@ img{width:auto; max-width:100%; height:auto; margin:0; padding:0; border:none; l
 .imgholder, .imgl, .imgr{padding:4px; border:1px solid #D6D6D6; text-align:center;}
 .imgl{float:left; margin:0 15px 15px 0; clear:left;}
 .imgr{float:right; margin:0 0 15px 15px; clear:right;}
+
+div.full_width .nopad {padding:2px;}
 
 /*----------------------------------------------HTML 5 Overrides-------------------------------------*/
 
@@ -51,9 +55,11 @@ div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
 .head{color:#C0BAB6; background-color:#FFF;}
 .topNav{
 	color:#919191; background-color:#02519e; /*be2819*/
+	/*
 	-webkit-box-shadow: 0px 6px 12px -8px #222;
 	-moz-box-shadow: 0px 6px 12px -8px #222;
-	box-shadow: 0px 6px 12px -8px #222;
+	box-shadow: 0px 6px 12px -8px #222; 
+	*/
 	position:relative;
 	z-index:9999;
 }
@@ -61,27 +67,43 @@ div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
 	color:#979797; background-color:#eef3f7;
 	position:relative; padding-bottom: 20px !important;
 }
-.mainBody a{color:#02519e; }
+.mainBody a{color:#0081FF; }
+.mainBody a:hover{color:#02519E; }
 .footer, .footer a{color:#919191; background-color:#232323;}
 a.readMore { float: right; font-weight: bold; font-size: 11px; color:#42b602;}
 
 /*----------------------------------------------Generalise-------------------------------------*/
 
 h1, h2, h3, h4, h5, h6{margin:0 0 25px 0; padding:0;  line-height:normal;}
-h1 {font-size:24px;}
-h2 {font-size:19px;}
-h3 {font-size:18px;}
-h4 {font-size:16px;}
-h5 {font-size:15px;}
-h6 {font-size:14px;}
+h1 {font-size:22px;}
+h2 {font-size:20px;}
+h3 {font-size:16px;}
+h4 {font-size:14px;}
+h5 {font-size:14px;}
+h6 {font-size:13px;}
 address{font-style:normal;}
 
 blockquote, q{display:block; padding:8px 10px; color:#979797; background-color:#ECECEC; font-style:italic; line-height:normal;}
 blockquote:before, q:before{content:'“ '; font-size:26px;}
 blockquote:after, q:after{content:' „'; font-size:26px; line-height:0;}
 
+/*----------------------------------------------full width wrapper-------------------------------------*/
+div.full_width{margin-top:20px;}
+div.full_width:first-child{margin-top:0;}
+.innerPage div.full_width:first-child{padding-top:20px;}
+div.full_width .block {	color: #616263;	background-color: #fff;	border: 1px solid #dadada;	padding:15px;   margin-bottom: 15px;
+}
+/*----------------------------------------------full width wrapper-------------------------------------*/
+
 #header, #topnav, #container, #footer, #copyright{margin:0 auto; font-size:.8em; line-height: 20px; }
 #header, #topnav, #container, #footer{max-width:960px; padding:0 10px; box-sizing:border-box; }
+
+#newsTicker{ background: #22B604; color:#fff; height:20px; padding:10px;}
+.newsTickerCont{max-width:960px; padding:0px 10px; box-sizing:border-box; margin:0 auto; overflow: hidden;}
+#newsTicker .tickHead {display: block;float: left; font-weight: bold; padding-right: 15px; text-transform: uppercase; border-right:1px dotted #fff;}
+#newsTicker a{display: inline-block;  padding-right: 15px; border-right:1px dotted #fff; color:#fff; margin:0 3px; font-size: 13px;}
+#newsTicker a:hover{text-decoration: underline; color: yellow;}
+#newsTicker marquee {width:65%;}
 /*----------------------------------------------Header-------------------------------------*/
 
 #header{padding:15px 0;}
@@ -89,7 +111,7 @@ blockquote:after, q:after{content:' „'; font-size:26px; line-height:0;}
 #header #logo{display:block; float:left; width:auto; clear:right;}
 #header #hgroup{display:block; float:right;  clear:right;}
 #header #hgroup h1, #header #hgroup h2{margin:0; font-weight:normal; text-transform:none;}
-#header #hgroup .siteSearchField input{ width:300px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px;}
+#header #hgroup .siteSearchField input{ max-width:300px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px;}
 #header #hgroup .siteSearchField,
 #header #hgroup .login{float:left; margin:8px 15px 0 0;}
 #header #hgroup .login a{
@@ -107,6 +129,11 @@ blockquote:after, q:after{content:' „'; font-size:26px; line-height:0;}
 /* ----------------------------------------------Banner-------------------------------------*/
 #banners {background:#efefef; }
 #banners img{ border:1px solid #dadada; border-top:0;}
+.bannerCont { max-height: 301px; max-width: 100%; padding-right: 0px;}
+.bannerCont #bannerNav {position: absolute; padding-top: 4px; height: 15px; left: 50%;  text-align: center;}
+.bannerCont #bannerNav a{text-indent: -999999px; border:1px solid #dadada; background: #ccc; border-radius: 10px; display: inline-block; width: 10px; height: 10px; margin-right: 3px;}
+.bannerCont #bannerNav a.activeSlide{background:#FF9900; border-color: #FF9900;}
+
 /* ----------------------------------------------Top Navigation-------------------------------------*/
 nav ul{margin:0; padding:0; list-style:none;}
 
@@ -123,14 +150,19 @@ nav ul{margin:0; padding:0; list-style:none;}
 
 #topnav li li a{display:block; margin:0; padding:10px 15px;}
 
-#topnav ul ul{display:none;}
-#topnav ul li:hover > ul{display:block;}
+#topnav ul ul{
+	display:none; background:#f7f7f7; border:1px solid #dadada;
+	-webkit-box-shadow: 0px 6px 12px -8px #222;
+	-moz-box-shadow: 0px 6px 12px -8px #222;
+	box-shadow: 0px 6px 12px -8px #222;
+ }
+#topnav ul li:hover ul{display:block;}
 
 
 
-#topnav li li a, #topnav li.active li a{color:#efefef;  font-weight:normal;}
-#topnav li.active a, #topnav a:hover{color:#FF9900; }
-#topnav ul li li:hover > a{color:#FFFFFF; background-color:#FF9900;}
+#topnav li li a, #topnav li.active li a{color:#0081FF; border-top:1px dotted #dadada; font-weight:normal;}
+#topnav li.active a, #topnav a:hover{color:#84FF00; /*#FF9900*/ }
+#topnav ul li li:hover > a{background-color:#efefef; color:#616263;}
 
 #topnav li a.drop, #topnav li.active a.drop{padding-left:15px; background-image:url("images/dropdown_side.gif"); background-position:5px center; background-repeat:no-repeat;}
 
@@ -144,7 +176,7 @@ nav ul{margin:0; padding:0; list-style:none;}
 
 #container{/*padding:30px 0;*/ clear:both;}
 .overviewBlock{	margin-bottom:20px;}
-.yammerUpdate li{ margin-bottom:10px; border-bottom:1px dotted #dadada; padding-bottom:5px;}
+.rssUpdate li{ margin-bottom:10px; border-bottom:1px dotted #dadada; padding-bottom:5px;}
 .newsUpdates li { display: inline-block; padding-bottom:10px; margin-bottom:10px; border-bottom:1px dotted #dadada;}
 .newsImg {
 	width: 50px;
@@ -154,10 +186,45 @@ nav ul{margin:0; padding:0; list-style:none;}
 	float: left;
 	margin-right: 20px;
 }
-.newsLinkCont .date {display:block; padding-bottom:5px; font-size:11px; color:#9b9b9b;}
+.newsLinkCont .date, .rssUpdate .date {display:block; padding-bottom:5px; font-size:11px; color:#9b9b9b;}
 .loginBlock  { padding:}
 .buttonCont {margin-left:155px; margin-top:15px;}
+.newsUpdates a, .rssUpdate a { font-weight: 600; }
 
+.yj-global-embed-publisher-with-avatar { padding-top: 10px; }
+.yj-hd + h3 { display:none;}
+
+.profileBlock .title, .micrositeBlock .title { position: relative; margin-bottom: 35px; }
+.profileBlock .title img, .micrositeBlock .title img{ position: absolute; right:0; top:5px;}
+
+/*----------------------------------------------Left Menu-------------------------------------*/
+body .leftMenuCont .block{ padding:0 ;}
+.leftMenuCont .leftMenu {padding: 0px 0;}
+.leftMenuCont .leftMenu a{ padding:10px 10px 10px ; display: block; border-bottom:1px solid #dadada; }
+.leftMenuCont .leftMenu li:last-child a {border-bottom: 0;}
+.leftMenuCont .leftMenu a:hover{background:#f7f7f7; color:#616263;}
+.leftMenuCont .leftMenu .active a{background:#22B604; /*#FB9703*/; color:#fff; border-bottom-color:#fff;}
+
+/*----------------------------------------------Profile-------------------------------------*/
+.profileListCont section{ float: left;}
+.profileListCont h2, .profileListCont h3 {margin-bottom: 10px;}
+.profileListCont li {border-top:1px dotted #dadada; padding:10px; }
+.profileListCont ul:last-child li {border-bottom:1px dotted #dadada;  }
+
+.profilePic img { border: 5px solid #efefef; max-width: 100%; width: 100px; }
+
+.profileTopCont {border-bottom:1px dotted #dadada; padding-bottom: 15px;}
+.profileDesc span{font-weight: bold; }
+.profileDesc .left{ width:50%; }
+.profileDesc .right{ text-align: left; }
+
+.profileCont form .row {padding-bottom:10px; display: inline-block;width: 100%;}
+.profileCont form label {font-weight: bold;}
+.profileCont form .inputField {display:none;}
+.profileCont form.edit .inputField {display:block;}
+.profileCont form.edit span.label {display:none;}
+.profileCont .emailIcon { margin-top: 30px;}
+.profileCont .editButton { margin-left: 135px;}
 /*----------------------------------------------form-------------------------------------*/
 .mainBody form .field { 	padding: 5px 0 10px;}
 .mainBody form label { min-width: 80px; display: inline-block; }

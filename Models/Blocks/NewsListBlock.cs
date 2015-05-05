@@ -9,7 +9,7 @@ namespace EPiCenterBaseProject.Models.Blocks
     [ContentType(DisplayName = "NewsListBlock", GUID = "64b46a4b-8758-4564-ae82-ffd562412805", Description = "")]
     public class NewsListBlock : BlockData
     {
-
+        [Required]
         [CultureSpecific]
         [Editable(true)]
         [Display(

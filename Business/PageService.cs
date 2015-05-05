@@ -154,6 +154,50 @@ namespace EPiCenterBaseProject.Business
             bool IsUserValid = (System.Web.HttpContext.Current.User != null) && System.Web.HttpContext.Current.User.Identity.IsAuthenticated;
             return IsUserValid;
         }
+
+        public PageReference GetProfilePageContainerPageRef()
+        {
+            var startPage = GetStartPage();
+            if (ContentReference.IsNullOrEmpty(startPage.ProfilePageContainer))
+            {
+                Log.Error("ProfilePageContainer has no value");
+            }
+            return startPage.ProfilePageContainer;
+        }
+
+        public PageReference GetBlogPageRef()
+        {
+            var startPage = GetStartPage();
+            if (ContentReference.IsNullOrEmpty(startPage.BlogPageContainer))
+            {
+                Log.Error("BlogPageContainer has no value");
+            }
+            return startPage.BlogPageContainer;
+        }
+
+        public string GetCreateBlogPageRef()
+        {
+            var startPage = GetStartPage();
+            if (PageReference.IsNullOrEmpty(startPage.CreateBlogPageReference))
+            {
+                Log.Error("CreateBlogPageReference has no value");
+            }
+            PageData blogPage = _repository.Get<PageData>(startPage.CreateBlogPageReference);
+            string pageUrl = GetFriendlyUrl(blogPage);
+            return pageUrl;
+        }
+
+        public string GetViewBlogListPageRef()
+        {
+            var startPage = GetStartPage();
+            if (PageReference.IsNullOrEmpty(startPage.ViewBlogListPageReference))
+            {
+                Log.Error("ViewBlogListPageReference has no value");
+            }
+            PageData blogPage = _repository.Get<PageData>(startPage.ViewBlogListPageReference);
+            string pageUrl = GetFriendlyUrl(blogPage);
+            return pageUrl;
+        }
    
     }
 }

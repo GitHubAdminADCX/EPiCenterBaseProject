@@ -27,5 +27,11 @@ namespace EPiCenterBaseProject.Business
 
             return newsList.ToList();
         }
+
+        public IEnumerable<NewsPage> GetAnnouncementList()
+        {
+            var newsList = GetNewsList().Where(x => x.ShowAsAnnouncement ==true);
+            return newsList.ToList();
+        }
     }
 }

@@ -13,5 +13,9 @@ namespace EPiCenterBaseProject.Business.Interfaces
         string GetFriendlyUrlByPageId(int pageId);
         bool IsUserLoggedIn();
         PageReference GetLoginPageRef();
+        PageReference GetProfilePageContainerPageRef();
+        PageReference GetBlogPageRef();
+        string GetCreateBlogPageRef();
+        string GetViewBlogListPageRef();
     }
 }
