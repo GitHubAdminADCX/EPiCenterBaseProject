@@ -25,6 +25,7 @@ namespace EPiCenterBaseProject.Business.AppStart
                   component.For<IMenuLinkService>().Use<MenuLinkService>();
                   component.For<IProfilePageService>().Use<ProfilePageService>();
                   component.For<IBlogPageService>().Use<BlogPageService>();
+                  component.For<IQuickPollService>().Use<QuickPollService>();
               });
 
             DependencyResolver.SetResolver(new StructureMapDependencyResolver(context.Container));

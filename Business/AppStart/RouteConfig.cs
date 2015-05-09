@@ -11,7 +11,12 @@ namespace EPiCenterBaseProject.Business.AppStart
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            
+
+            routes.MapRoute(
+            "QuickPollBlock",
+            "QuickPollBlock/Index",
+            new { controller = "QuickPollBlock", action = "Index" }
+                );
 
             routes.MapRoute(
                 name: "Default",

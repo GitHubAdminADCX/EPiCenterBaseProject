@@ -12,7 +12,7 @@ var basic = {
     width: "100%",
 
     // Theme options
-    theme_advanced_buttons1: "bold,|,bullist,numlist,|,link,unlink|",
+    theme_advanced_buttons1: "mybutton,bold,italic,underline,separator,strikethrough,justifyleft,justifycenter,justifyright, justifyfull,bullist,numlist,undo,redo,link,unlink,code",
     theme_advanced_buttons2: "",
     theme_advanced_buttons3: "",
     theme_advanced_buttons4: "",
@@ -21,7 +21,7 @@ var basic = {
     theme_advanced_path: false,
     theme_advanced_resizing: false,
     body_class: "module-text",
-    content_css: "/gui/css/mail-editor.css",
+    content_css: "~/UI/css/mail-editor.css",
 };
 
 var userArticle = tinymce.extend({}, basic, {

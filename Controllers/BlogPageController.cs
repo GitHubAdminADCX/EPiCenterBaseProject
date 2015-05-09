@@ -23,6 +23,9 @@ namespace EPiCenterBaseProject.Controllers
 
         public ActionResult Index(BlogPage currentPage)
         {
+            if (!_pageService.IsUserLoggedIn())
+                _pageService.GetLoginPageLink();
+
             var model = CreateModel(new BlogPageViewModel
             {
                 BlogPage = currentPage,

@@ -120,15 +120,27 @@
     <Compile Include="Business\Interfaces\INewsService.cs" />
     <Compile Include="Business\Interfaces\IPageService.cs" />
     <Compile Include="Business\Interfaces\IProfilePageService.cs" />
+    <Compile Include="Business\Interfaces\IQuickPollService.cs" />
     <Compile Include="Business\Interfaces\IRSSService.cs" />
     <Compile Include="Business\MenuLinkService.cs" />
     <Compile Include="Business\NewsService.cs" />
     <Compile Include="Business\PageService.cs" />
     <Compile Include="Business\ProfilePageService.cs" />
+    <Compile Include="Business\QuickPoll\QuickPollCollection.cs" />
+    <Compile Include="Business\QuickPoll\QuickPollBlockInitializer.cs" />
+    <Compile Include="Business\QuickPoll\QuickPollObjects.cs" />
+    <Compile Include="Business\QuickPollService.cs" />
+    <Compile Include="Business\QuickPoll\QuickPollOptions.cs" />
+    <Compile Include="Business\QuickPoll\QuickPollResult.cs" />
+    <Compile Include="Business\QuickPoll\QuickPollViewModel.cs" />
+    <Compile Include="Business\QuickPoll\QuickPollVotes.cs" />
+    <Compile Include="Business\RenderHelper.cs" />
     <Compile Include="Business\RSSService.cs" />
     <Compile Include="Controllers\BannerBlockController.cs" />
     <Compile Include="Controllers\BasePageController.cs" />
     <Compile Include="Controllers\BlogPageController.cs" />
+    <Compile Include="Controllers\ContentPageController.cs" />
+    <Compile Include="Controllers\HomePageBlockController.cs" />
     <Compile Include="Controllers\HtmlBlockController.cs" />
     <Compile Include="Controllers\LoginPageController.cs" />
     <Compile Include="Controllers\NewsListBlockController.cs" />
@@ -136,6 +148,7 @@
     <Compile Include="Controllers\ProfileListingPageController.cs" />
     <Compile Include="Controllers\ProfilePageController.cs" />
     <Compile Include="Controllers\ProjectOverviewPageController.cs" />
+    <Compile Include="Controllers\QuickPollBlockController.cs" />
     <Compile Include="Controllers\RSSFeedBlockController.cs" />
     <Compile Include="Controllers\RSSFeedPageController.cs" />
     <Compile Include="Controllers\StandardPageController.cs" />
@@ -151,8 +164,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Blocks\BannerBlock.cs" />
+    <Compile Include="Models\Blocks\HomePageBlock.cs" />
     <Compile Include="Models\Blocks\HtmlBlock.cs" />
     <Compile Include="Models\Blocks\NewsListBlock.cs" />
+    <Compile Include="Models\Blocks\QuickPollBlock.cs" />
     <Compile Include="Models\Blocks\RSSFeedBlock.cs" />
     <Compile Include="Models\Blocks\YammerBlock.cs" />
     <Compile Include="Models\Media\GenericMedia.cs" />
@@ -161,6 +176,7 @@
     <Compile Include="Models\Pages\BasePage.cs" />
     <Compile Include="Models\Pages\BlogPage.cs" />
     <Compile Include="Models\Pages\Container.cs" />
+    <Compile Include="Models\Pages\ContentPage.cs" />
     <Compile Include="Models\Pages\LoginPage.cs" />
     <Compile Include="Models\Pages\NewsPage.cs" />
     <Compile Include="Models\Pages\ProfileListingPage.cs" />
@@ -176,7 +192,9 @@
     <Compile Include="Models\ViewModels\BannerBlockViewModel.cs" />
     <Compile Include="Models\ViewModels\BasePageViewModel.cs" />
     <Compile Include="Models\ViewModels\BlogPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\ContentPageViewModel.cs" />
     <Compile Include="Models\ViewModels\HeaderViewModel.cs" />
+    <Compile Include="Models\ViewModels\HomePageBlockViewModel.cs" />
     <Compile Include="Models\ViewModels\HtmlBlockViewModel.cs" />
     <Compile Include="Models\ViewModels\LoginPageViewModel.cs" />
     <Compile Include="Models\ViewModels\NewsListBlockViewModel.cs" />
@@ -184,6 +202,7 @@
     <Compile Include="Models\ViewModels\ProfileListingPageViewModel.cs" />
     <Compile Include="Models\ViewModels\ProfilePageViewModel.cs" />
     <Compile Include="Models\ViewModels\ProjectOverviewPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\QuickPollBlockViewModel.cs" />
     <Compile Include="Models\ViewModels\RSSFeedBlockViewModel.cs" />
     <Compile Include="Models\ViewModels\RSSFeedPageViewModel.cs" />
     <Compile Include="Models\ViewModels\StandardPageViewModel.cs" />
@@ -308,14 +327,17 @@
     <Content Include="Static\lightbox\photos\thumb_image4.jpg" />
     <Content Include="Static\lightbox\photos\thumb_image5.jpg" />
     <Content Include="Global.asax" />
+    <Content Include="UI\css\font-awesome.min.css" />
     <Content Include="UI\css\framework.css" />
     <Content Include="UI\css\ie.css" />
     <Content Include="UI\css\images\dropdown_left.gif" />
     <Content Include="UI\css\images\dropdown_right.gif" />
     <Content Include="UI\css\images\dropdown_side.gif" />
     <Content Include="UI\css\layout.css" />
+    <Content Include="UI\css\mail-editor.css" />
     <Content Include="UI\css\mediaqueries.css" />
     <Content Include="UI\css\navi.css" />
+    <Content Include="UI\fonts\fontawesome-webfont.svg" />
     <Content Include="UI\images\banner1.png" />
     <Content Include="UI\images\icon-login.png" />
     <Content Include="UI\images\logo.png" />
@@ -666,10 +688,19 @@
     <Content Include="Views\ProjectOverviewPage\Index.cshtml" />
     <Content Include="Views\YammerBlock\Index.cshtml" />
     <Content Include="Views\BlogPage\Index.cshtml" />
+    <None Include="UI\fonts\fontawesome-webfont.eot" />
+    <None Include="UI\fonts\fontawesome-webfont.ttf" />
+    <None Include="UI\fonts\fontawesome-webfont.woff" />
+    <None Include="UI\fonts\fontawesome-webfont.woff2" />
+    <None Include="UI\fonts\FontAwesome.otf" />
     <None Include="UI\TinyMCE\tiny_mce\plugins\wikilinks\js\test.json" />
     <Content Include="Views\BlogPage\_TinyMCEScripts.cshtml" />
     <Content Include="Views\ViewBlogPage\Index.cshtml" />
     <Content Include="Views\ViewBlogList\Index.cshtml" />
+    <Content Include="Views\QuickPollBlock\Index.cshtml" />
+    <Content Include="Views\QuickPollBlock\_QuickPollChart.cshtml" />
+    <Content Include="Views\HomePageBlock\Index.cshtml" />
+    <Content Include="Views\ContentPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

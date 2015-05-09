@@ -198,6 +198,11 @@ namespace EPiCenterBaseProject.Business
             string pageUrl = GetFriendlyUrl(blogPage);
             return pageUrl;
         }
+
+        public string GetLoginPageLink()
+        {
+            return GetFriendlyUrl(GetLoginPageRef());
+        }
    
     }
 }

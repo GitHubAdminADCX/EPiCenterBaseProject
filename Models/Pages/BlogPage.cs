@@ -25,5 +25,11 @@ namespace EPiCenterBaseProject.Models.Pages
             Order = 2)]
         public virtual XhtmlString BlogBody { get; set; }
 
+        [Required]
+        [Display(
+            GroupName = SystemTabNames.Content,
+            Order = 3)]
+        public virtual string Author { get; set; }
+
     }
 }

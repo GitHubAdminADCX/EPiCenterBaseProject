@@ -8,7 +8,51 @@ body{font-size:100%; font-family:"Century Gothic",Georgia, "Times New Roman", Ti
 hr {height:1px; background-color:#dadada; border: 1px solid #dadada;}
 p{margin-bottom:15px;}
 ul {list-style:none; margin:0; padding:0;}
-input[type="text"], input[type="search"] {padding:5px; border:1px solid #dadada;}
+
+/* Form Elements */
+input[type="text"],input[type="password"] , input[type="search"] {padding:5px; border:1px solid #dadada;}
+input[type="radio"] { margin-right:5px;}
+input[type="checkbox"] { margin-right:5px;}
+select{ padding:5px; border:1px solid #dadada;}
+textarea{ padding:5px; border:1px solid #dadada; vertical-align:top; min-height:80px;}
+input[type="button"],input[type="submit"],input[type="reset"], button { 
+	padding: 5px 15px; 
+	display: inline-block; 
+	margin:5px 0px;
+    border-color: #1a96ed;
+    box-shadow: 0 5px 0 rgba(255,255,255,0),0 1px 0 rgba(255,255,255,0) inset;
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
+    border:1px solid #1a96ed;
+    border-radius:3px;
+    font-size: 100%;
+}
+
+input[type="button"],input[type="submit"], button{
+	background: linear-gradient(to bottom, #3bbaf7 0%, #1ba4fa 100%);
+}
+
+input[type="button"].disabled,input[type="submit"].disabled, button.disabled{
+	background: linear-gradient(to bottom, #B0E3FC 0, #A4DBFD 100%);
+	border-color: #A3D5F8;
+	transition: background-color .3s;
+	text-shadow: 0 0px 0 rgba(0,0,0,0.15);
+}
+
+input[type="reset"]{
+	background: linear-gradient(to bottom, #fafafa 0, #e0e2e5 100%);
+	color:#666;  border-color: #dadada;
+}
+
+input[type="reset"].disabled{
+	background: linear-gradient(to bottom, #fafafa 0, #e0e2e5 100%);
+	color:#ccc;  border-color: #1a96ed;
+	transition: background-color .3s;
+}
+
+
+/* Form Elements */
+
 .justify{text-align:justify;}
 .bold{font-weight:bold;}
 .center{text-align:center;}
@@ -19,7 +63,8 @@ input[type="text"], input[type="search"] {padding:5px; border:1px solid #dadada;
 .right{float:right;}
 .clear{display:block; clear:both;}
 .clear:after{display:block; visibility:hidden; height:0; clear:both; font-size:0; content:"";}
-
+.hide {display:none;}
+.show {display:block;}
 a{outline:none; text-decoration:none; color:#02519E;}
 
 .fl_left{float:left;}
@@ -72,13 +117,17 @@ div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
 .footer, .footer a{color:#919191; background-color:#232323;}
 a.readMore { float: right; font-weight: bold; font-size: 11px; color:#42b602;}
 
+.overviewBlock ul, .newsBlock ul, .overviewBlock ol, .newsBlock ol {margin-bottom:10px; margin-left:10px;}
+.overviewBlock ul li, .newsBlock ul li{ list-style: disc; list-style-position: inside; }
+.overviewBlock ol li, .newsBlock ol li{ list-style-position: inside;  }
+
 /*----------------------------------------------Generalise-------------------------------------*/
 
 h1, h2, h3, h4, h5, h6{margin:0 0 25px 0; padding:0;  line-height:normal;}
 h1 {font-size:22px;}
 h2 {font-size:20px;}
 h3 {font-size:16px;}
-h4 {font-size:14px;}
+h4 {font-size:14px; margin-bottom:15px;}
 h5 {font-size:14px;}
 h6 {font-size:13px;}
 address{font-style:normal;}
@@ -88,7 +137,7 @@ blockquote:before, q:before{content:'“ '; font-size:26px;}
 blockquote:after, q:after{content:' „'; font-size:26px; line-height:0;}
 
 /*----------------------------------------------full width wrapper-------------------------------------*/
-div.full_width{margin-top:20px;}
+div.full_width1{margin-top:20px;}
 div.full_width:first-child{margin-top:0;}
 .innerPage div.full_width:first-child{padding-top:20px;}
 div.full_width .block {	color: #616263;	background-color: #fff;	border: 1px solid #dadada;	padding:15px;   margin-bottom: 15px;
@@ -125,11 +174,13 @@ div.full_width .block {	color: #616263;	background-color: #fff;	border: 1px soli
 	background:#f5f9fd url("../images/icon-login.png") 7px 5px no-repeat;
 	display:inline-block;
 }
+#header #hgroup div:first-child { margin-top: 13px;  color: #22B604;}
 
 /* ----------------------------------------------Banner-------------------------------------*/
 #banners {background:#efefef; }
+#banners li{min-height:300px;}
 #banners img{ border:1px solid #dadada; border-top:0;}
-.bannerCont { max-height: 301px; max-width: 100%; padding-right: 0px;}
+.bannerCont { max-height: 301px; max-width: 100%; padding-right: 0px; overflow: hidden; margin-bottom: 20px;}
 .bannerCont #bannerNav {position: absolute; padding-top: 4px; height: 15px; left: 50%;  text-align: center;}
 .bannerCont #bannerNav a{text-indent: -999999px; border:1px solid #dadada; background: #ccc; border-radius: 10px; display: inline-block; width: 10px; height: 10px; margin-right: 3px;}
 .bannerCont #bannerNav a.activeSlide{background:#FF9900; border-color: #FF9900;}
@@ -139,7 +190,7 @@ nav ul{margin:0; padding:0; list-style:none;}
 
 #topnav{color:#ffffff; clear:both;}
 #topnav ul{margin:0; padding:0; list-style:none; text-transform:uppercase; font-size:12px;}
-#topnav ul ul{z-index:9999; position:absolute; width:160px; text-transform:none;}
+#topnav ul ul{z-index:9999; position:absolute; left:0; width:160px; text-transform:none;}
 #topnav ul ul ul, #topnav ul ul ul ul{left:160px; top:0;}
 #topnav ul li:last-child ul, #topnav ul li.last-child ul{right:0;}
 #topnav ul.negative{left:-160px;}
@@ -175,16 +226,34 @@ nav ul{margin:0; padding:0; list-style:none;}
 /*----------------------------------------------Content Area-------------------------------------*/
 
 #container{/*padding:30px 0;*/ clear:both;}
+.homeBlock  {position: relative; overflow: hidden; }
+.homeBlock h2 {margin-bottom:15px; color: #79C2FD;}
+.homeBlockImg {max-width: 100%; margin-bottom:15px; height:40px;}
+.homeBlockImg i{font-size: 150px; color: #79C2FD; position: absolute; right:-10px; top:-40px;}
+.homeBlockImg i.fa-connectdevelop{right:-35px; top:-55px;}
+.homeBlockImg i.fa-globe{right:-30px; top:-60px; font-size: 170px}
+
 .overviewBlock{	margin-bottom:20px;}
 .rssUpdate li{ margin-bottom:10px; border-bottom:1px dotted #dadada; padding-bottom:5px;}
-.newsUpdates li { display: inline-block; padding-bottom:10px; margin-bottom:10px; border-bottom:1px dotted #dadada;}
+.newsBlock .newsUpdates {margin:0;}
+.newsUpdates li { 
+	display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px dotted #dadada;
+  float: left;
+  border: 1px dotted #dadada;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.two_third .newsUpdates li { width: 47%; margin-right: 10px; }
 .newsImg {
-	width: 50px;
-	height: 50px;
+	width: 60px;
+	height: 60px;
 	background: #f7f7f7;
 	border: 1px solid #dadada;
 	float: left;
-	margin-right: 20px;
+	margin-right: 15px;
 }
 .newsLinkCont .date, .rssUpdate .date {display:block; padding-bottom:5px; font-size:11px; color:#9b9b9b;}
 .loginBlock  { padding:}
@@ -224,19 +293,35 @@ body .leftMenuCont .block{ padding:0 ;}
 .profileCont form.edit .inputField {display:block;}
 .profileCont form.edit span.label {display:none;}
 .profileCont .emailIcon { margin-top: 30px;}
-.profileCont .editButton { margin-left: 135px;}
+.profileCont form .editButton { margin-left: 135px; width:auto;}
+.pollQuestionCont {margin-bottom:10px;}
+.pollQuestionCont li { display: block; width: 96%; padding: 5px; border: 1px solid #dadada; border-radius: 5px;  margin-bottom: 5px;}
+.pollQuestionCont li.selected { background: #DEF4FF ;}
+.pollQuestionCont label { display: block;  width: 90%;}
+.pollCont{font-family: arial; font-size: 12px;}
+.pollCont h3{margin-bottom: 15px; font-size: 14px;}
+
+.pollResultCont li {padding:5px 0;}
+.pollQGraph{ border:1px solid #efefef; border-radius:5px; height:22px; }
+.pollQGraph span {display:none; text-align:center; padding:1px 5px; border-radius:5px; color:#fff; font-size: 11px;}
+#pollQuest0 span{background:#0082D3;}
+#pollQuest1 span{background:#99D700;}
+#pollQuest2 span{background:#F72D0A;}
+#pollQuest3 span{background:#EDE100;}
+#pollQuest4 span{background:#BA001C;}
+#pollQuest5 span{background:#037E8C;}
+#pollQuest6 span{background:#374140;}
+#pollQuest7 span{background:#EF6B54;}
+#pollQuest8 span{background:#0CE841;}
+#pollQuest9 span{background:#434573;}
+#pollQuest10 span{background:#FBD50A;}
+
+
 /*----------------------------------------------form-------------------------------------*/
 .mainBody form .field { 	padding: 5px 0 10px;}
 .mainBody form label { min-width: 80px; display: inline-block; }
 .mainBody form label:first-child { min-width: 150px; display: inline-block; }
 
-.mainBody form input[type="text"] { min-width:250px;}
-.mainBody form input[type="radio"] { margin-right:5px;}
-.mainBody form input[type="checkbox"] { margin-right:5px;}
-.mainBody form select{ min-width:260px; padding:5px; border:1px solid #dadada;}
-.mainBody form textarea{ min-width:250px; padding:5px; border:1px solid #dadada; vertical-align:top; min-height:80px}
-.mainBody form input[type="button"],.mainBody form input[type="submit"],.mainBody form input[type="reset"], 
-.mainBody form button { padding: 2px 15px; display: inline-block; margin-right:5px;}
 /*----------------------------------------------Footer-------------------------------------*/
 
 #footer{padding:20px 0;}

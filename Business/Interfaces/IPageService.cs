@@ -17,5 +17,6 @@ namespace EPiCenterBaseProject.Business.Interfaces
         PageReference GetBlogPageRef();
         string GetCreateBlogPageRef();
         string GetViewBlogListPageRef();
+        string GetLoginPageLink();
     }
 }

@@ -27,13 +27,5 @@ namespace EPiCenterBaseProject.Models.Blocks
             Order = 3)]
         public virtual XhtmlString Body { get; set; }
 
-        [CultureSpecific]
-        [Editable(true)]
-        [Display(
-            Name = "Link",
-            Description = "Link",
-            GroupName = SystemTabNames.Content,
-            Order = 5)]
-        public virtual PageReference Link { get; set; }
     }
 }

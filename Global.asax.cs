@@ -4,6 +4,9 @@ using EPiServer.ServiceLocation;
 using EPiServer.Web;
 using EPiCenterBaseProject.Business;
 using System.Web.Optimization;
+using EPiCenterBaseProject.Business.AppStart;
+using System.Web.Routing;
+using System.Web;
 
 namespace EPiCenterBaseProject
 {
@@ -12,6 +15,7 @@ namespace EPiCenterBaseProject
         protected void Application_Start()
         {
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
             // Register Display Options
             var options = ServiceLocator.Current.GetInstance<DisplayOptions>();
             options
@@ -47,6 +51,7 @@ namespace EPiCenterBaseProject
             public const string OneThirdWidth = "span4";
             public const string NoRenderer = "norenderer";
         }
+
 
         /// <summary>
         /// Main widths used in the Bootstrap HTML framework

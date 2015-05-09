@@ -141,5 +141,6 @@ namespace EPiCenterBaseProject.Models.Pages
             Order = 24)]
         public virtual PageReference ViewBlogListPageReference { get; set; }
 
+
     }
 }

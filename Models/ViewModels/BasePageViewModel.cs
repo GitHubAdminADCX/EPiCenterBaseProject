@@ -120,5 +120,25 @@ namespace EPiCenterBaseProject.Models.ViewModels
             return IsInActive;
         }
 
+        public string GetLoggedInUserName()
+        {
+            if (_pageService.IsUserLoggedIn())
+            {
+                return System.Web.HttpContext.Current.User.Identity.Name;
+            }
+            else
+            {
+                return "Guest";
+            }
+        }
+
+        public bool IsUserLoggedIn 
+        { 
+            get 
+            {
+                return _pageService.IsUserLoggedIn();
+            } 
+        }
+
     }
 }

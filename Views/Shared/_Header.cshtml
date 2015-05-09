@@ -1,19 +1,21 @@
-﻿@using EPiServer.Web.Routing @model EPiCenterBaseProject.Models.ViewModels.BasePageViewModel
+﻿@using EPiServer.Web.Routing
+@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html @model EPiCenterBaseProject.Models.ViewModels.BasePageViewModel
 <div class="wrapper head">
     <header id="header" class="clear">
     <div id="logo">
 		<a href="@Model.HeaderViewModel.StartPage.LinkURL"><img src="~/UI/images/logo.png" alt="EPiCenter" /></a>
 	</div>
     <div id="hgroup">
-		<div class="field siteSearchField"></div>
+		<div class="field siteSearchField">Welcome @Model.GetLoggedInUserName()</div>
 		<ul class="login">
         @if(@Model.HeaderViewModel.IsUserLoggedIn == true)
         {
-         <li><a href="@Url.Action("SignOutUser")">Sign Out</a></li>
+         <li><a href="/en/SignOutUser/">Sign Out</a></li>
         }
         else
         {
-        <li><a href="@Url.Action("SignInUser")">My Login</a></li>
+        <li><a href="/en/SignInUser/">My Login</a></li>
         }
 		</ul>	
     </div>

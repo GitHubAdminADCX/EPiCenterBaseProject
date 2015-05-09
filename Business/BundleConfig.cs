@@ -20,20 +20,22 @@ namespace EPiCenterBaseProject.Business
             //BundleTable.EnableOptimizations = false;
 
             bundles.Add(new StyleBundle("~/bundles/css").Include(
-                        "~/UI/css/layout.css",
-                        "~/UI/css/mediaqueries.css"
-                        //"~/UI/css/framework.css",
-                        //"~/UI/css/navi.css"
+                        "~/UI/css/framework.css",
+                        "~/UI/css/mediaqueries.css",
+                        "~/UI/css/font-awesome.min.css",
+                        "~/UI/css/layout.css"
                         ));
 
 
             bundles.Add(new ScriptBundle("~/bundles/netrscripts").Include(
                         "~/UI/scripts/jquery.1.9.0.min.js",
-                         "~/UI/scripts/script.js",
-                         //"~/UI/scripts/libs/jquery-fullcalendar.min.js",
-                         "~/UI/scripts/libs/jquery.cycle.all.js"
+                        "~/UI/scripts/libs/jquery.cycle.all.js",
+                         //"~/UI/scripts/Chart.js",
+                         //"~/UI/scripts/chartdata.js",
+                         //"~/UI/scripts/startup.js",
+                         "~/UI/scripts/script.js"
                          //"~/UI/scripts/libs/jquery.cycle.lite.js",
-                         //"~/UI/scripts/libs/jquery.cycle2.min.js"
+                         
                         )); 
 
 

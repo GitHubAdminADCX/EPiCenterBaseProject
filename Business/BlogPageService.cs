@@ -31,7 +31,7 @@ namespace EPiCenterBaseProject.Business
                 parentPage.Name = headline;
                 parentPage.Title = headline;
                 parentPage.BlogBody = body;
-
+                parentPage.Author = System.Web.HttpContext.Current.User.Identity.Name;
                 // Set the URL segment (page name in address)
                 parentPage.URLSegment = UrlSegment.CreateUrlSegment(parentPage);
 
@@ -50,6 +50,7 @@ namespace EPiCenterBaseProject.Business
 
             writableClone.Title = headline;
             writableClone.BlogBody = body;
+            writableClone.Author = System.Web.HttpContext.Current.User.Identity.Name;
             var pageref = _contentRepository.Save(writableClone, SaveAction.Publish, AccessLevel.NoAccess);
             return writableClone.LinkURL.ToString();
         }
